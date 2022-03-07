@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darttahtasi
+        {
+            width: 300px; height: 300px; border-radius: 150px; background-color: lightblue;display: grid;justify-content: center;align-content: center;
+        }
+        .dart2
+        {
+            width: 200px; height: 200px; border-radius: 50%; background-color: lightgray; 
+            display: grid;
+            justify-content: center; 
+            align-content: center;
+        }
+        .dart3
+        {
+            width: 50px; height: 50px; border-radius: 50%; background-color: red;
+        }
+        .point
+        {
+            width: 10px; height: 10px; border-radius: 5px; background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="darttahtasi">
+    <script>
+        //Soru:Bir fonksiyona gönderilen sayıların en küçüğünü ve en büyüğünü bulup bunların toplamını döndüren fonksiyonu yazınız.
+        // function Yaz(str)
+        // {
+        //     document.writeln(str+ "<br/>")
+        // }
+
+        // function Toplama(...sayı)
+        // {
+        //     sayı.sort((a,b)=>b-a);
+        //     Yaz(sayı);
+        //     return sayı[0]+sayı[sayı.length-1];
+        // }
+
+        // Yaz(Toplama(42,43,42,56,79,99,333,85,98,9999));
+
+        // Yaz("<br/>")
+        //Soru:(Yakşalık olarak)bir dart alanı oluşturup 3 atış yapan fonksiyonu yazınız.
+
+        function Dart()
+        {
+            let rndx=Math.ceil(Math.random()*150);
+            let rndy=Math.ceil(Math.random()*150);
+            let str="<div style='width: 10px; height: 10px; border-radius: 5px; background-color: black; left:"+rndx+"px;top:"+rndy+"px; position:absolute'"
+            
+            document.writeln("<div ><div class='darttahtasi'><div class='dart2'><div class=dart3><div>"+str+"</div></div></div></div><div>")
+        }
+
+        Dart();
+    </script>
+    </div>
+</body>
+</html>

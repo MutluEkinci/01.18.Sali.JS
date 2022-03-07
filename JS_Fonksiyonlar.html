@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "use strict";
+        //Fonksiyonlar:Return type yoktur.Siz ne döndürürseniz o döner.
+        //1-Fonksiyon tanımı
+        function Merhaba()
+        {
+            document.writeln("Merhaba JS Fonksiyonlar...");
+        }
+        
+        //2-Fonksiyonların çağırılması
+
+        Merhaba();
+
+        //3-Fonksiyonların tipleri
+        //3.1-Parametrik fonksiyonlar
+        function Topla(s1,s2)
+        {
+            document.writeln("Toplam:"+s1+s2);
+        }
+        Topla(3,4);
+
+        //3.2-Geriye değer döndüren fonksiyonlar
+        // Bir fonksiyonda şarta bağlı olarak birden fazla return olabilir.
+        function Carp(s1,s2)
+        {
+            return s1*s2;
+        }
+        document.writeln(Carp(3,4));
+
+        //params kullanımı
+        function Topla(...sayilar)
+        {
+            let toplam =0;
+            for(let sayi of sayilar)
+            {
+                toplam+=sayi;
+            }
+            return toplam;
+        }
+
+        document.writeln(Topla(1,1,1,1));
+        document.writeln(Topla(1,1,1,1,2,3,214,34,2));
+        //topla(4,4);//Fonksiyon override olduğu için bu fonksiyon çalışmaz.
+
+        //yinelemeli fonksiyonlar
+
+        function Faktoriyel(sayi)
+        {
+            if(sayi==1) return 1;
+
+            return sayi*Faktoriyel(sayi-1);
+        }
+
+        document.writeln("<br/>");
+        document.writeln(Faktoriyel(5));
+
+        //Fonksiyon tanımlama
+        var fn=new Function("x,","return x*x");
+        document.writeln(fn(3));
+
+        //anonim fonksiyon
+        var fn2=function(x){return x*x*x};
+        document.writeln(fn2(3));
+
+        var fnk=(x,y)=>{return x*y};
+        document.writeln(fnk(3,5));
+
+        
+    </script>
+</body>
+</html>
